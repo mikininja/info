@@ -17,7 +17,8 @@ int main(int argc, char **argv){
   return 0;
 }
 int leggicruci(FILE *f,char array[MAX][MAX]){
-  int res=0,i=0,j=0,nparole=0;
+  int res=0,i=0,j=0,nparole=0,x,y;
+  fscanf(f,"%d %d",&x,&y);
   while(res!=EOF){
     res=fgetc(f);
     if(res!=EOF && ( res=='\n' || res=='*')){
@@ -28,10 +29,11 @@ int leggicruci(FILE *f,char array[MAX][MAX]){
       }
       j=-1;
     }
-    if(res!=EOF && i<20 && j<20){
+    else if(res!=EOF && i<20 && j<20){
       array[i][j]=res;
     }
     j++;
   }
   return nparole;
+  
 }
