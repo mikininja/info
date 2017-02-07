@@ -1,0 +1,9 @@
+typedef struct dati{
+float ml;
+char citta[30];
+}dati;
+typedf struct nodo{
+dati info;
+struct nodo* next;
+}nodo;
+typedef nodo* elLista;
